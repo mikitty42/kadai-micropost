@@ -51,6 +51,6 @@ class MicropostsController < ApplicationController
   end
 
   def set_micropost
-    @micropost = MIcropost.find(params[:id])
+    @micropost = Micropost.find(params[:id])
   end
 end
