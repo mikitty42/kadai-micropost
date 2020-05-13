@@ -31,6 +31,7 @@ class MicropostsController < ApplicationController
   def update
     if @micropost.update
       redirect_to microposts_path,notice: "メッセージを更新しました!"
+    end
   end
 
   def destroy
