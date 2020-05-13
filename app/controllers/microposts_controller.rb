@@ -1,5 +1,5 @@
 class MicropostsController < ApplicationController
-  before_action :set_microposts, only: [:show,:edit,:update,:destroy]
+  before_action :set_micropost, only: [:show,:edit,:update,:destroy]
 
   def index
     @microposts = Micropost.all
@@ -50,7 +50,7 @@ class MicropostsController < ApplicationController
     params.require(:micropost).permit(:content)
   end
 
-  def set_microposts
-    @microposts = MIcropost.find(params[:id])
+  def set_micropost
+    @micropost = MIcropost.find(params[:id])
   end
 end
