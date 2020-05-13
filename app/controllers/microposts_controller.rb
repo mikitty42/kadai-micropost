@@ -29,13 +29,13 @@ class MicropostsController < ApplicationController
   end
 
   def update
-    if @micropost.update
+    if @micropost.update(micropost_params)
       redirect_to microposts_path,notice: "メッセージを更新しました!"
     end
   end
 
   def destroy
-    @blog.destroy
+    @micropost.destroy
     redirect_to microposts_path, notice: "メッセージを削除しました!"
   end
 
