@@ -36,37 +36,45 @@
               https://support.micropost.com/articles/486421をご利用ください。</p>
            <span class="glyphicon glyphicon-map-marker" aria-hidden="true">東京都中央区</span>
            <span class="glyphicon glyphicon-link" aria-hidden="true">blo.micropost.com/ja_jp.html</span>
-           <span class="glyphicon glyphicon-heart" aria-hidden="true">誕生日: 3月21日</span>
+           <span class="glyphicon glyphicon-heart" aria-hidden="true">誕生日: 3月21日</span><br>
            <span class="glyphicon glyphicon-list-alt" aria-hidden="true">2007年6月からMicropostを利用しています</span>
            <p>141フォロー中　100万フォロワー</p>
            </div>
           <h2>Micropost一覧</h2>
-              <table>
+              <table class='table'>
                 <tr>
+                  <th>投稿者</th>
                   <th>投稿内容</th>
                 </tr>
-    <% @microposts.each do |micropost| %>
-      <td><%= micropost.content %></td>
-    <% end %>
-    </table>
+                <% @microposts.each do |micropost| %>
+                  <tr>
+                    <td><%= micropost.name %></td>
+                    <td><%= micropost.content %></td>
+                    <td><%= link_to '詳細を確認する',micropost_path(micropost.id) %></td>
+                    <td><%= link_to 'メッセージを編集する',edit_micropost_path(micropost.id) %></td>
+                    <td><%= link_to 'メッセージを削除する', micropost_path(micropost.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
+                  </tr>
+                  <% end %>
+                </table>
+                <%= link_to '新しいMicropostを作成する',new_micropost_path %>
         </aside>
         <article class='contents'>
             <div class="box5">
-              <h2>Micropostを使ってみよう!</h2>
+              <h3>Micropostを使ってみよう!</h3>
               <p>今すぐ登録して、タイムラインをカスタマイズしましょう!</p>
               <span class="label label-info">アカウント作成</span>
             </div>
             <div class="box3">
-              <h2>おすすめツイート</h2>
+              <h2>おすすめメッセージ</h2>
             </div>
             <div class='box4'>
-              <h4>Micropost DEV JAPAN　　<span class="label label-info">フォローする</span></h4>
+              <h4><span class="glyphicon glyphicon-star-empty" aria-hidden="true">Micropost DEV JAPAN　　<span class="label label-info">フォローする</span></h4>
             </div>
             <div class='box4'>
-            <h4>Micropostメディア　　<span class="label label-info">フォローする</span></h4>
+            <h4><span class="glyphicon glyphicon-heart" aria-hidden="true">Micropostメディア　　<span class="label label-info">フォローする</span></h4>
           </div>
           <div class='box4'>
-            <h4>Micropost Safety　<span class="label label-info">フォローする</span></h4>
+            <h4><span class="glyphicon glyphicon-bell" aria-hidden="true">Micropost Safety　<span class="label label-info">フォローする</span></h4>
       </div>
 </article>
 </div>
