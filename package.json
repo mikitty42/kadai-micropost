@@ -1,5 +1,9 @@
 {
   "name": "microposts",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "3",
+    "jquery": "^3.5.1",
+    "uquery": "^0.0.1"
+  }
 }
