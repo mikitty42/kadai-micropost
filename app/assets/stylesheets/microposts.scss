@@ -9,30 +9,69 @@ ul{
     font-weight:bold;
     text-align:center;
 }
-.menu{
-    background-color:#012F4B;
-    color:#fff;
-}
-.menu li {
-    padding:5% 10%;
-    text-align:center;
-}
-.contents li{
-    background-color:white;
-    color:black;
-    padding:10% 10%;
-    box-sizing: border-box;
-    border: solid 1px #fff;
-}
-.topic li{
-    margin:1%;
-    border-bottom: dotted 1px #333333;
-}
 .container{
     margin-top:20px;
     padding-bottom: 100px;
 }
 .logo{
-  width: 500px;
+  width: 980px;
+  height: 300px;
+}
+.box5 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    border: solid 1px white;
+    background-color: #F2F2F2;
+}
+.box5 p {
+    margin: 0;
+    padding: 0;
+}
+.box3 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: black;
+    background: #F2F2F2
+}
+.box3 p {
+    margin: 0;
+    padding: 0;
+}
+.box1 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    border: solid 1px #F2F2F2;
+}
+.box1 p {
+    margin: 0;
+    padding: 0;
+}
+.side_menu{
+  width: 700px;
+  float: left;
+}
+.contents{
+  float: left;
   height: 200px;
+  width: 400px;
+}
+.wrapper{
+  margin-top: 10px;
+}
+.side_menu{
+  width: 500px;
+}
+.content{
+  width: 400px;
+}
+.box4 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #2c2c2f;
+    background: #F2F2F2;
+}
+.box4 p {
+    margin: 0;
+    padding: 0;
 }
